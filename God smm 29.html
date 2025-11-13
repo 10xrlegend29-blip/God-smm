@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>God SMM - Professional Social Media Marketing Agency</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --text: #222;
+      --card: #fff;
+      --primary: #000;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eaeaea;
+      --card: #1f1f1f;
+      --primary: #fff;
+    }
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }/* Header + Animated Banner */
+header {
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  padding: 90px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px);} to {opacity: 1; transform: translateY(0);} }
+header h1 { font-size: 58px; margin: 0; letter-spacing: 2px; }
+header p { font-size: 22px; opacity: 0.9; }
+
+/* Navbar */
+nav { background: #000; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 500; }
+
+.section { max-width: 1200px; margin: 40px auto; padding: 20px; }
+
+h2 { font-size: 34px; border-left: 6px solid var(--primary); padding-left: 12px; margin-bottom: 25px; }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.card { background: var(--card); padding: 25px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+
+.btn { display: inline-block; margin-top: 15px; padding: 12px 25px; background: var(--primary); color: #fff; border-radius: 8px; text-decoration: none; transition: 0.3s; }
+
+/* Logo */
+.logo { font-size: 34px; font-weight: bold; text-align: center; margin-top: 20px; }
+.logo span { color: crimson; }
+
+/* Dark Mode Switch */
+.toggle { position: fixed; top: 20px; right: 20px; background:#000; color:#fff; padding:10px 15px; border-radius:8px; cursor:pointer; }
+
+/* Admin Dashboard */
+.admin-panel {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-top: 20px;
+}
+.admin-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+.admin-box { background:var(--bg); padding:20px; border-radius:10px; text-align:center; }
+
+/* Payment Gateway */
+.payment-box input { width:100%; padding:12px; border-radius:8px; border:1px solid #555; margin-bottom:10px; }
+
+/* API Docs */
+.api-box { background:var(--card); padding:25px; border-radius:12px; }
+code { background:#333; color:#fff; padding:5px 8px; border-radius:6px; display:block; margin-top:10px; }
+
+/* OTP UI */
+.otp-input { width:50px; padding:12px; margin:5px; text-align:center; font-size:22px; border-radius:8px; border:1px solid #555; }
+
+/* Footer */
+footer { background:#000; color:#fff; padding:30px; text-align:center; margin-top:40px; }
+
+  </style>
+</head>
+<body><div class="toggle" onclick="toggleTheme()">🌙 Mode</div><header>
+  <h1>GOD SMM</h1>
+  <p>Most Trusted & Professional Social Media Marketing Agency in India</p>
+</header><div class="logo">GOD <span>SMM</span></div><nav>
+  <a href="#instagram">Instagram</a>
+  <a href="#youtube">YouTube</a>
+  <a href="#facebook">Facebook</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#order">Order</a>
+  <a href="#api">API</a>
+  <a href="#login">Login</a>
+</nav><!-- Order Form --><div class="section" id="order">
+  <h2>Place Your Order</h2>
+  <div class="order-box card">
+    <input type="text" placeholder="Service Name" />
+    <input type="text" placeholder="Link" />
+    <input type="number" placeholder="Quantity" />
+    <a class="btn" href="#">Submit Order</a>
+  </div>
+</div><!-- Payment Gateway --><div class="section" id="payment">
+  <h2>Payment Gateway</h2>
+  <div class="payment-box card">
+    <input type="text" placeholder="Full Name" />
+    <input type="number" placeholder="Amount" />
+    <input type="text" placeholder="UPI ID" />
+    <a class="btn">Pay Now</a>
+  </div>
+</div><!-- API Documentation --><div class="section" id="api">
+  <h2>API Documentation</h2>
+  <div class="api-box">
+    <p>Example Request:</p>
+    <code>https://godsmm.com/api?key=YOUR_KEY&action=add&service=1&link=URL&quantity=1000</code>
+  </div>
+</div><!-- OTP Login --><div class="section" id="otp">
+  <h2>OTP Login</h2>
+  <div class="card" style="text-align:center;">
+    <input class="otp-input" maxlength="1">
+    <input class="otp-input" maxlength="1">
+    <input class="otp-input" maxlength="1">
+    <input class="otp-input" maxlength="1">
+    <br><br>
+    <a class="btn" href="#">Verify OTP</a>
+  </div>
+</div><script>
+function toggleTheme() {
+  const body = document.body;
+  if (body.getAttribute('data-theme') === 'dark') body.removeAttribute('data-theme');
+  else body.setAttribute('data-theme', 'dark');
+}
+</script><footer>
+  © 2025 God SMM • Professional SMM Panel
+</footer><!-- Mobile App Web-App Style --><div class="section" id="mobileapp">
+  <h2>Mobile App (Web-App UI)</h2>
+  <div class="card">
+    <p>Install our Web-App for fast access</p>
+    <a class="btn" href="#">Install App</a>
+  </div>
+</div><!-- Sidebar Dashboard Layout --><div class="section" id="dashboard">
+  <h2>User Dashboard</h2>
+  <div class="card">
+    <p>Welcome to your dashboard</p>
+    <ul>
+      <li>Profile</li>
+      <li>Order History</li>
+      <li>Deposit History</li>
+      <li>Notifications</li>
+    </ul>
+  </div>
+</div><!-- User Profile Page --><div class="section" id="profile">
+  <h2>User Profile</h2>
+  <div class="card">
+    <input type="text" placeholder="Full Name" />
+    <input type="text" placeholder="Email" />
+    <input type="text" placeholder="Phone Number" />
+    <a class="btn">Update Profile</a>
+  </div>
+</div><!-- Order History Page --><div class="section" id="orderhistory">
+  <h2>Order History</h2>
+  <div class="card">
+    <p>No orders placed yet.</p>
+  </div>
+</div><!-- Deposit History Page --><div class="section" id="deposithistory">
+  <h2>Deposit History</h2>
+  <div class="card">
+    <p>No deposits found.</p>
+  </div>
+</div><!-- Notifications Panel --><div class="section" id="notifications">
+  <h2>Notifications</h2>
+  <div class="card">
+    <p>No new notifications.</p>
+  </div>
+</div><!-- Services List Page --><div class="section" id="services">
+  <h2>All Services</h2>
+  <div class="card">
+    <ul>
+      <li>Instagram Followers</li>
+      <li>Instagram Views</li>
+      <li>YouTube Views</li>
+      <li>Facebook Followers</li>
+      <li>Twitter Services</li>
+      <li>Telegram Services</li>
+    </ul>
+  </div>
+</div><!-- Additional Pro Features --><!-- Wallet System --><div class="section" id="wallet">
+  <h2>Wallet System</h2>
+  <div class="card">
+    <p>Wallet Balance: <strong>₹0.00</strong></p>
+    <a class="btn" href="#">Add Funds</a>
+  </div>
+</div><!-- Order Tracking --><div class="section" id="tracking">
+  <h2>Order Tracking</h2>
+  <div class="card">
+    <input type="text" placeholder="Enter Order ID" />
+    <a class="btn" href="#">Track Order</a>
+  </div>
+</div><!-- Support Ticket System --><div class="section" id="support">
+  <h2>Support Tickets</h2>
+  <div class="card">
+    <input type="text" placeholder="Subject" />
+    <textarea style="width:100%;height:120px;border-radius:10px;padding:10px;" placeholder="Describe your issue..."></textarea>
+    <a class="btn">Submit Ticket</a>
+  </div>
+</div><!-- Referral Program --><div class="section" id="referral">
+  <h2>Referral Program</h2>
+  <div class="card">
+    <p>Your Referral Link:</p>
+    <code>https://godsmm.com/ref?user=12345</code>
+    <p>Earn 10% commission on every referred purchase!</p>
+  </div>
+</div><!-- Multi-language --><div class="section" id="language">
+  <h2>Language Selection</h2>
+  <div class="card" style="text-align:center;">
+    <select style="padding:12px;border-radius:8px;">
+      <option>English</option>
+      <option>Hindi</option>
+      <option>Arabic</option>
+      <option>Spanish</option>
+    </select>
+  </div>
+</div><!-- Sidebar Navigation --><div class="section" id="sidebar">
+  <h2>Dashboard Sidebar</h2>
+  <div class="card" style="display:flex;gap:20px;">
+    <div style="width:200px;background:var(--card);padding:20px;border-radius:10px;">
+      <p>🏠 Home</p>
+      <p>📦 Orders</p>
+      <p>💳 Add Funds</p>
+      <p>🛠 Services</p>
+      <p>📨 Tickets</p>
+      <p>⚙ Settings</p>
+    </div>
+    <div style="flex:1;">
+      <p>This is a modern sidebar dashboard layout preview.</p>
+    </div>
+  </div>
+</div><!-- Animated SVG Logo --><div class="section" id="animated-logo">
+  <h2>Animated Logo</h2>
+  <div class="card" style="text-align:center;">
+    <svg width="200" height="80">
+      <text x="10" y="50" font-size="40" fill="crimson" style="animation: glow 2s infinite alternate;">GOD SMM</text>
+    </svg>
+  </div>
+</div><!-- Hero Banner with Graphics --><div class="section" id="hero-banner">
+  <h2>Hero Banner</h2>
+  <div class="card" style="text-align:center;padding:40px;background:linear-gradient(135deg,#111,#333);color:#fff;">
+    <h1>Grow Your Social Media Fast 🚀</h1>
+    <p>Premium SMM Services at the Best Prices</p>
+  </div>
+</div><!-- Services Price Table Linked --><div class="section" id="service-table">
+  <h2>Services & Pricing</h2>
+  <div class="card">
+    <table style="width:100%;border-collapse:collapse;">
+      <tr><th>Service</th><th>Rate</th><th>Order</th></tr>
+      <tr><td>Instagram 10K Views</td><td>₹0.08001</td><td><a class="btn">Order</a></td></tr>
+      <tr><td>YouTube Views</td><td>₹20 / 1K</td><td><a class="btn">Order</a></td></tr>
+      <tr><td>Facebook Followers</td><td>₹50 / 1K</td><td><a class="btn">Order</a></td></tr>
+    </table>
+  </div>
+</div><!-- App Mockup Page --><div class="section" id="app-mockup">
+  <h2>Mobile App Preview</h2>
+  <div class="card" style="text-align:center;">
+    <p>Coming Soon: GOD SMM Mobile App</p>
+    <div style="width:200px;height:350px;background:#000;border-radius:20px;margin:auto;"></div>
+  </div>
+</div><!-- FAQ Page --><div class="section" id="faq">
+  <h2>FAQ</h2>
+  <div class="card">
+    <p><strong>Q:</strong> How fast is delivery?</p>
+    <p><strong>A:</strong> Usually instant or within minutes.</p><br>
+    <p><strong>Q:</strong> Is refund available?</p>
+    <p><strong>A:</strong> Refunds only for non-delivered orders.</p>
+  </div>
+</div><!-- Contact Page --><div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <div class="card">
+    <input type="text" placeholder="Your Name" style="width:100%;padding:12px;border-radius:8px;">
+    <input type="text" placeholder="Your Email" style="width:100%;padding:12px;margin-top:10px;border-radius:8px;">
+    <textarea style="width:100%;height:120px;border-radius:10px;padding:10px;margin-top:10px;" placeholder="Message..."></textarea><!-- Contact Number -->
+<p style="margin-top:15px;font-weight:bold;">📞 Contact: <a href="tel:8901184758" style="color:crimson;text-decoration:none;">8901184758</a></p>
+
+<!-- WhatsApp Button -->
+<a class="btn" href="https://wa.me/918901184758" style="background:green;margin-top:10px;display:inline-block;">💬 WhatsApp</a>
+
+<!-- Call Now Button -->
+<a class="btn" href="tel:8901184758" style="background:#333;margin-top:10px;display:inline-block;">📞 Call Now</a>
+
+<!-- Email Button -->
+<a class="btn" href="mailto:support@godsmm.com" style="background:#005eff;margin-top:10px;display:inline-block;">✉ Email Us</a>
+
+<!-- Social Icons -->
+<div style="margin-top:20px;display:flex;gap:15px;justify-content:center;">
+  <a href="#" style="font-size:24px;text-decoration:none;">📸</a>
+  <a href="#" style="font-size:24px;text-decoration:none;">📘</a>
+  <a href="#" style="font-size:24px;text-decoration:none;">▶️</a>
+  <a href="#" style="font-size:24px;text-decoration:none;">✈️</a>
+</div>
+
+<!-- Map Embed Placeholder -->
+<div style="margin-top:20px;width:100%;height:200px;background:#ddd;border-radius:10px;text-align:center;padding-top:80px;color:#555;">
+  📍 Map Location (Add Later)
+</div>
+
+<a class="btn" style="margin-top:20px;">Send Message</a>
+
+  </div>
+</div></body>
+<!-- Terms & Conditions Page -->
+<div class="section" id="terms">
+  <h2>Terms & Conditions</h2>
+  <div class="card">
+    <p>By using GOD SMM services, you agree to follow all platform rules, payment policies, and service limitations.</p>
+    <ul>
+      <li>No refunds after order processing begins.</li>
+      <li>We are not responsible for user mistakes (wrong link, wrong service).</li>
+      <li>We do not guarantee engagement quality beyond service description.</li>
+      <li>You must not use our services for illegal activities.</li>
+    </ul>
+  </div>
+</div><!-- Privacy Policy Page --><div class="section" id="privacy">
+  <h2>Privacy Policy</h2>
+  <div class="card">
+    <p>Your data is safe with us. We do not share personal information with third parties.</p>
+    <ul>
+      <li>We only store necessary account and order details.</li>
+      <li>Payment information is not stored on our servers.</li>
+      <li>We use encryption to protect user data.</li>
+    </ul>
+  </div>
+</div><!-- Advanced Admin Dashboard --><div class="section" id="admin-dashboard">
+  <h2>Admin Dashboard (UI)</h2>
+  <div class="admin-panel">
+    <div class="admin-grid">
+      <div class="admin-box">Manage Users</div>
+      <div class="admin-box">Manage Orders</div>
+      <div class="admin-box">Add / Edit Services</div>
+      <div class="admin-box">Payments Overview</div>
+      <div class="admin-box">Support Tickets</div>
+      <div class="admin-box">API Keys Management</div>
+    </div>
+  </div>
+</div><!-- Placeholder Logo (Text-based) --><div class="section" id="logo">
+  <h2>Logo</h2>
+  <div class="card" style="text-align:center;">
+    <h1 style="font-size:50px; letter-spacing:3px;">GOD <span style="color:crimson;">SMM</span></h1>
+    <p>(You can replace this with PNG/SVG logo later)</p>
+  </div>
+</div></body>
+</html>
